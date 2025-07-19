@@ -2,7 +2,7 @@ services:
   - type: web
     name: diatest-server
     env: python
-    buildCommand: ""
+    runtime: python3.10
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
     plan: free
-    runtime: python3.10
